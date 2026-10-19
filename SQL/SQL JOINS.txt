@@ -1,0 +1,620 @@
+=============================Joins=======================
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e, dept d where e.deptno=d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         20 RESEARCH
+SMITH              20         20 RESEARCH
+ALLEN              30         30 SALES
+WARD               30         30 SALES
+JONES              20         20 RESEARCH
+MARTIN             30         30 SALES
+BLAKE              30         30 SALES
+CLARK              10         10 ACCOUNTING
+SCOTT              20         20 RESEARCH
+KING               10         10 ACCOUNTING
+TURNER             30         30 SALES
+ADAMS              20         20 RESEARCH
+JAMES              30         30 SALES
+FORD               20         20 RESEARCH
+MILLER             10         10 ACCOUNTING
+
+15 rows selected.
+
+
+SQL> select e.*,d.loc from emp e, dept d where e.deptno=d.deptno;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO LOC
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- -------------
+      7000 RAM        ANALYST         7566 17-DEC-81       3000                    20 DALLAS
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20 DALLAS
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30 CHICAGO
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30 CHICAGO
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20 DALLAS
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30 CHICAGO
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30 CHICAGO
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10 NEW YORK
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20 DALLAS
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10 NEW YORK
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30 CHICAGO
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20 DALLAS
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30 CHICAGO
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20 DALLAS
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10 NEW YORK
+
+15 rows selected.
+SQL> select s.*,c.cname from student s, course c where s.cid=c.cid;
+
+STUDENT_ID STUDENT_NAME                AGE GENDER      PHONE EMAIL                       CID    EXAM_ID CNAME
+---------- -------------------- ---------- ------ ---------- -------------------- ---------- ---------- ----------
+      1000 Ram                          20 m      9098712384 r@gmail.com                1000       1000 java
+      1001 Siva                         21 m      8989081232 s@gmail.com                1002       1002 python
+      1002 Sumathi                      21 f      9012312343 s@gmail.com                1001       1001 sql
+      1003 Sunil                        20 m      9012321232 sunil@gmail.com            1001       1001 sql
+SQL> select e.*,d.dname,d.loc from emp e,dept  d where e.deptno=d.deptno and 
+  2  ename in('SMITH','ALLEN');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO DNAME          LOC
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- -------------- ------------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20 RESEARCH       DALLAS
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30 SALES          CHICAGO
+SQL> select *from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7000 RAM        ANALYST         7566 17-DEC-81       3000                    20
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+15 rows selected.
+SQL> select e.*,d.dname,d.loc from emp e,dept  d where e.deptno=d.deptno and 
+  2  ename in('SMITH','ALLEN');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO DNAME          LOC
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- -------------- ------------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20 RESEARCH       DALLAS
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30 SALES          CHICAGO
+
+SQL> select e.*,d.dname,d.loc from emp e , dept d where e.deptno=d.deptno and e.job in('SALESMAN','MANAGER','CLERK') and  d.dname in('ACCOUNTING','SALES') and e.sal between 1000 and 3000;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO DNAME          LOC
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- -------------- -------------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30 SALES          CHICAGO
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30 SALES          CHICAGO
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30 SALES          CHICAGO
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30 SALES          CHICAGO
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10 ACCOUNTING     NEW YORK
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30 SALES          CHICAGO
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10 ACCOUNTING     NEW YORK
+
+7 rows selected.
+
+SQL> select s.*,c.cname from student s, course c where s.cid=c.cid and s.student_name='Ram';
+
+STUDENT_ID STUDENT_NAME                AGE GENDER      PHONE EMAIL                       CID    EXAM_ID CNAME
+---------- -------------------- ---------- ------ ---------- -------------------- ---------- ---------- ----------
+      1000 Ram                          20 m      9098712384 r@gmail.com                1000       1000 java
+
+SQL> select e.*,d.dname,d.loc from emp e,dept d where e.deptno=d.deptno and e.deptno in(10,20,30) and e.sal between 800 and 3000 and d.dname in('ACCOUNTING','SALES') and e.mgr not like '%8';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO DNAME          LOC
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- -------------- -------------
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30 SALES          CHICAGO
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10 ACCOUNTING     NEW YORK
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10 ACCOUNTING     NEW YORK
+
+================inner join=====================
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e inner join dept d on e.deptno=d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         20 RESEARCH
+SMITH              20         20 RESEARCH
+ALLEN              30         30 SALES
+WARD               30         30 SALES
+JONES              20         20 RESEARCH
+MARTIN             30         30 SALES
+BLAKE              30         30 SALES
+CLARK              10         10 ACCOUNTING
+SCOTT              20         20 RESEARCH
+KING               10         10 ACCOUNTING
+TURNER             30         30 SALES
+ADAMS              20         20 RESEARCH
+JAMES              30         30 SALES
+FORD               20         20 RESEARCH
+MILLER             10         10 ACCOUNTING
+
+15 rows selected.
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e inner join dept d on e.deptno!=d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         10 ACCOUNTING
+SMITH              20         10 ACCOUNTING
+ALLEN              30         10 ACCOUNTING
+WARD               30         10 ACCOUNTING
+JONES              20         10 ACCOUNTING
+MARTIN             30         10 ACCOUNTING
+BLAKE              30         10 ACCOUNTING
+SCOTT              20         10 ACCOUNTING
+TURNER             30         10 ACCOUNTING
+ADAMS              20         10 ACCOUNTING
+JAMES              30         10 ACCOUNTING
+FORD               20         10 ACCOUNTING
+ALLEN              30         20 RESEARCH
+WARD               30         20 RESEARCH
+MARTIN             30         20 RESEARCH
+BLAKE              30         20 RESEARCH
+CLARK              10         20 RESEARCH
+KING               10         20 RESEARCH
+TURNER             30         20 RESEARCH
+JAMES              30         20 RESEARCH
+MILLER             10         20 RESEARCH
+RAM                20         30 SALES
+SMITH              20         30 SALES
+JONES              20         30 SALES
+CLARK              10         30 SALES
+SCOTT              20         30 SALES
+KING               10         30 SALES
+ADAMS              20         30 SALES
+FORD               20         30 SALES
+MILLER             10         30 SALES
+RAM                20         40 OPERATIONS
+SMITH              20         40 OPERATIONS
+ALLEN              30         40 OPERATIONS
+WARD               30         40 OPERATIONS
+JONES              20         40 OPERATIONS
+MARTIN             30         40 OPERATIONS
+BLAKE              30         40 OPERATIONS
+CLARK              10         40 OPERATIONS
+SCOTT              20         40 OPERATIONS
+KING               10         40 OPERATIONS
+TURNER             30         40 OPERATIONS
+ADAMS              20         40 OPERATIONS
+JAMES              30         40 OPERATIONS
+FORD               20         40 OPERATIONS
+MILLER             10         40 OPERATIONS
+
+45 rows selected.
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e inner join dept d on e.deptno!=d.deptno where e.ename='SMITH';
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+SMITH              20         10 ACCOUNTING
+SMITH              20         30 SALES
+SMITH              20         40 OPERATIONS
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e inner join dept d on e.deptno>d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         10 ACCOUNTING
+SMITH              20         10 ACCOUNTING
+ALLEN              30         10 ACCOUNTING
+ALLEN              30         20 RESEARCH
+WARD               30         10 ACCOUNTING
+WARD               30         20 RESEARCH
+JONES              20         10 ACCOUNTING
+MARTIN             30         10 ACCOUNTING
+MARTIN             30         20 RESEARCH
+BLAKE              30         10 ACCOUNTING
+BLAKE              30         20 RESEARCH
+SCOTT              20         10 ACCOUNTING
+TURNER             30         10 ACCOUNTING
+TURNER             30         20 RESEARCH
+ADAMS              20         10 ACCOUNTING
+JAMES              30         10 ACCOUNTING
+JAMES              30         20 RESEARCH
+FORD               20         10 ACCOUNTING
+
+18 rows selected.
+
+
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e inner join dept d on e.deptno>=d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         10 ACCOUNTING
+RAM                20         20 RESEARCH
+SMITH              20         10 ACCOUNTING
+SMITH              20         20 RESEARCH
+ALLEN              30         10 ACCOUNTING
+ALLEN              30         20 RESEARCH
+ALLEN              30         30 SALES
+WARD               30         10 ACCOUNTING
+WARD               30         20 RESEARCH
+WARD               30         30 SALES
+JONES              20         10 ACCOUNTING
+JONES              20         20 RESEARCH
+MARTIN             30         10 ACCOUNTING
+MARTIN             30         20 RESEARCH
+MARTIN             30         30 SALES
+BLAKE              30         10 ACCOUNTING
+BLAKE              30         20 RESEARCH
+BLAKE              30         30 SALES
+CLARK              10         10 ACCOUNTING
+SCOTT              20         10 ACCOUNTING
+SCOTT              20         20 RESEARCH
+KING               10         10 ACCOUNTING
+TURNER             30         10 ACCOUNTING
+TURNER             30         20 RESEARCH
+TURNER             30         30 SALES
+ADAMS              20         10 ACCOUNTING
+ADAMS              20         20 RESEARCH
+JAMES              30         10 ACCOUNTING
+JAMES              30         20 RESEARCH
+JAMES              30         30 SALES
+FORD               20         10 ACCOUNTING
+FORD               20         20 RESEARCH
+MILLER             10         10 ACCOUNTING
+
+33 rows selected.
+
+			========================join===============
+SQL> select *from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7000 RAM        ANALYST         7566 17-DEC-81       3000                    20
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+15 rows selected.
+
+SQL> select *from dept;
+
+    DEPTNO DNAME          LOC
+---------- -------------- -------------
+        10 ACCOUNTING     NEW YORK
+        20 RESEARCH       DALLAS
+        30 SALES          CHICAGO
+        40 OPERATIONS     BOSTON
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e join dept d on e.deptno<d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         30 SALES
+RAM                20         40 OPERATIONS
+SMITH              20         30 SALES
+SMITH              20         40 OPERATIONS
+ALLEN              30         40 OPERATIONS
+WARD               30         40 OPERATIONS
+JONES              20         30 SALES
+JONES              20         40 OPERATIONS
+MARTIN             30         40 OPERATIONS
+BLAKE              30         40 OPERATIONS
+CLARK              10         20 RESEARCH
+CLARK              10         30 SALES
+CLARK              10         40 OPERATIONS
+SCOTT              20         30 SALES
+SCOTT              20         40 OPERATIONS
+KING               10         20 RESEARCH
+KING               10         30 SALES
+KING               10         40 OPERATIONS
+TURNER             30         40 OPERATIONS
+ADAMS              20         30 SALES
+ADAMS              20         40 OPERATIONS
+JAMES              30         40 OPERATIONS
+FORD               20         30 SALES
+FORD               20         40 OPERATIONS
+MILLER             10         20 RESEARCH
+MILLER             10         30 SALES
+MILLER             10         40 OPERATIONS
+
+27 rows selected.
+
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e join dept d on e.deptno<=d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         20 RESEARCH
+RAM                20         30 SALES
+RAM                20         40 OPERATIONS
+SMITH              20         20 RESEARCH
+SMITH              20         30 SALES
+SMITH              20         40 OPERATIONS
+ALLEN              30         30 SALES
+ALLEN              30         40 OPERATIONS
+WARD               30         30 SALES
+WARD               30         40 OPERATIONS
+JONES              20         20 RESEARCH
+JONES              20         30 SALES
+JONES              20         40 OPERATIONS
+MARTIN             30         30 SALES
+MARTIN             30         40 OPERATIONS
+BLAKE              30         30 SALES
+BLAKE              30         40 OPERATIONS
+CLARK              10         10 ACCOUNTING
+CLARK              10         20 RESEARCH
+CLARK              10         30 SALES
+CLARK              10         40 OPERATIONS
+SCOTT              20         20 RESEARCH
+SCOTT              20         30 SALES
+SCOTT              20         40 OPERATIONS
+KING               10         10 ACCOUNTING
+KING               10         20 RESEARCH
+KING               10         30 SALES
+KING               10         40 OPERATIONS
+TURNER             30         30 SALES
+TURNER             30         40 OPERATIONS
+ADAMS              20         20 RESEARCH
+ADAMS              20         30 SALES
+ADAMS              20         40 OPERATIONS
+JAMES              30         30 SALES
+JAMES              30         40 OPERATIONS
+FORD               20         20 RESEARCH
+FORD               20         30 SALES
+FORD               20         40 OPERATIONS
+MILLER             10         10 ACCOUNTING
+MILLER             10         20 RESEARCH
+MILLER             10         30 SALES
+MILLER             10         40 OPERATIONS
+
+42 rows selected.
+
+SQL> select *from course;
+
+       CID CNAME      TRAINERNAM       FEES
+---------- ---------- ---------- ----------
+      1000 java       shyam           12000
+      1001 sql        kumar           15000
+      1002 python     ram             12000
+
+SQL> select *from student;
+
+STUDENT_ID STUDENT_NAME                AGE GENDER      PHONE EMAIL                       CID    EXAM_ID
+---------- -------------------- ---------- ------ ---------- -------------------- ---------- ----------
+      1000 Ram                          20 m      9098712384 r@gmail.com                1000       1000
+      1001 Siva                         21 m      8989081232 s@gmail.com                1002       1002
+      1002 Sumathi                      21 f      9012312343 s@gmail.com                1001       1001
+      1003 Sunil                        20 m      9012321232 sunil@gmail.com            1001       1001
+SQL> select s.student_name,s.cid,c.cname from student s join course c on s.cid=c.cid;
+
+STUDENT_NAME                CID CNAME
+-------------------- ---------- ----------
+Ram                        1000 java
+Siva                       1002 python
+Sumathi                    1001 sql
+Sunil                      1001 sql
+SQL> select s.student_name,s.cid,c.cid ,c.cname from student s join course c on s.cid!=c.cid;
+
+STUDENT_NAME                CID        CID CNAME
+-------------------- ---------- ---------- ----------
+Siva                       1002       1000 java
+Sumathi                    1001       1000 java
+Sunil                      1001       1000 java
+Ram                        1000       1001 sql
+Siva                       1002       1001 sql
+Ram                        1000       1002 python
+Sumathi                    1001       1002 python
+Sunil                      1001       1002 python
+
+8 rows selected.
+
+SQL> select s.student_name,s.cid,c.cid,c.cname from student s join course c on s.cid>c.cid;
+
+STUDENT_NAME                CID        CID CNAME
+-------------------- ---------- ---------- ----------
+Siva                       1002       1000 java
+Siva                       1002       1001 sql
+Sumathi                    1001       1000 java
+Sunil                      1001       1000 java
+
+SQL> select s.student_name,s.cid,c.cid,c.cname from student s join course c on s.cid>c.cid;
+
+STUDENT_NAME                CID        CID CNAME
+-------------------- ---------- ---------- ----------
+Siva                       1002       1000 java
+Siva                       1002       1001 sql
+Sumathi                    1001       1000 java
+SQL> select s.student_name,s.cid,c.cid,c.cname from student s join course c on s.cid>c.cid;
+
+STUDENT_NAME                CID        CID CNAME
+-------------------- ---------- ---------- ----------
+Siva                       1002       1000 java
+Siva                       1002       1001 sql
+Sumathi                    1001       1000 java
+Sunil                      1001       1000 java
+SQL> select s.student_name,s.cid,c.cid,c.cname from student s join course c on s.cid<=c.cid;
+
+STUDENT_NAME                CID        CID CNAME
+-------------------- ---------- ---------- ----------
+Ram                        1000       1000 java
+Ram                        1000       1001 sql
+Ram                        1000       1002 python
+Siva                       1002       1002 python
+Sumathi                    1001       1001 sql
+Sumathi                    1001       1002 python
+Sunil                      1001       1001 sql
+Sunil                      1001       1002 python
+
+8 rows selected.
+SQL> select s.*,c.cname from student s join course c on s.cid!=c.cid where s.student_name='Ram';
+
+STUDENT_ID STUDENT_NAME                AGE GENDER      PHONE EMAIL                       CID    EXAM_ID CNAME
+---------- -------------------- ---------- ------ ---------- -------------------- ---------- ---------- ----------
+      1000 Ram                          20 m      9098712384 r@gmail.com                1000       1000 sql
+      1000 Ram                          20 m      9098712384 r@gmail.com                1000       1000 python
+
+===========================================self join=============================
+SQL> select e.ename,e.sal,e.job || ' manager is ' || e1.ename from emp e,emp e1 where e.mgr=e1.empno and e.ename='ALLEN';
+
+ENAME             SAL E.JOB||' MANAGERIS'||E1.ENAME
+---------- ---------- ------------------------------
+ALLEN            1600 SALESMANmanager is BLAKE
+
+SQL> select e.ename || 'manager is ' || e1.ename as mgrname from emp e ,emp e1 where e.mgr=e1.empno and e.ename='ALLEN';
+
+MGRNAME
+-------------------------------
+ALLENmanager is BLAKE
+
+
+SQL> select e.*,e1.ename from emp e ,emp e1 where e.mgr=e1.empno;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO ENAME
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- ----------
+      7000 RAM        ANALYST         7566 17-DEC-81       3000                    20 JONES
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20 FORD
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30 BLAKE
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30 BLAKE
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20 KING
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30 BLAKE
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30 KING
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10 KING
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20 JONES
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30 BLAKE
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20 SCOTT
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30 BLAKE
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20 JONES
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10 CLARK
+
+14 rows selected.
+
+SQL> select e.*,e1.* from emp e , emp e1 where e.mgr=e1.empno;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO      EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ---------- ---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7000 RAM        ANALYST         7566 17-DEC-81       3000                    20       7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20       7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30       7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30       7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20       7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30       7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30       7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10       7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20       7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30       7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20       7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30       7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20       7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10       7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+
+14 rows selected.
+
+=================================
+
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e  left join dept d on e.deptno=d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         20 RESEARCH
+SMITH              20         20 RESEARCH
+ALLEN              30         30 SALES
+WARD               30         30 SALES
+JONES              20         20 RESEARCH
+MARTIN             30         30 SALES
+BLAKE              30         30 SALES
+CLARK              10         10 ACCOUNTING
+SCOTT              20         20 RESEARCH
+KING               10         10 ACCOUNTING
+TURNER             30         30 SALES
+ADAMS              20         20 RESEARCH
+JAMES              30         30 SALES
+FORD               20         20 RESEARCH
+MILLER             10         10 ACCOUNTING
+
+15 rows selected.
+
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e right join dept d on e.deptno=d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+MILLER             10         10 ACCOUNTING
+CLARK              10         10 ACCOUNTING
+KING               10         10 ACCOUNTING
+JONES              20         20 RESEARCH
+RAM                20         20 RESEARCH
+SMITH              20         20 RESEARCH
+FORD               20         20 RESEARCH
+ADAMS              20         20 RESEARCH
+SCOTT              20         20 RESEARCH
+ALLEN              30         30 SALES
+TURNER             30         30 SALES
+JAMES              30         30 SALES
+WARD               30         30 SALES
+BLAKE              30         30 SALES
+MARTIN             30         30 SALES
+                              40 OPERATIONS
+
+16 rows selected.
+SQL> select e.ename,e.deptno,d.deptno,d.dname from emp e full outer join  dept d on e.deptno=d.deptno;
+
+ENAME          DEPTNO     DEPTNO DNAME
+---------- ---------- ---------- --------------
+RAM                20         20 RESEARCH
+SMITH              20         20 RESEARCH
+ALLEN              30         30 SALES
+WARD               30         30 SALES
+JONES              20         20 RESEARCH
+MARTIN             30         30 SALES
+BLAKE              30         30 SALES
+CLARK              10         10 ACCOUNTING
+SCOTT              20         20 RESEARCH
+KING               10         10 ACCOUNTING
+TURNER             30         30 SALES
+ADAMS              20         20 RESEARCH
+JAMES              30         30 SALES
+FORD               20         20 RESEARCH
+MILLER             10         10 ACCOUNTING
+                              40 OPERATIONS
+
+16 rows selected.
+SQL> select s.student_name,s.cid,c.cid,c.cname from student s left join course c on s.cid=c.cid;
+
+STUDENT_NAME                CID        CID CNAME
+-------------------- ---------- ---------- ----------
+Ram                        1000       1000 java
+Siva                       1002       1002 python
+Sumathi                    1001       1001 sql
+Sunil                      1001       1001 sql
+SQL> select s.*,c.cname from student s left join course c on s.cid=c.cid
+  2  ;
+
+STUDENT_ID STUDENT_NAME                AGE GENDER      PHONE EMAIL                       CID    EXAM_ID CNAME
+---------- -------------------- ---------- ------ ---------- -------------------- ---------- ---------- ---------
+      1000 Ram                          20 m      9098712384 r@gmail.com                1000       1000 java
+      1001 Siva                         21 m      8989081232 s@gmail.com                1002       1002 python
+      1002 Sumathi                      21 f      9012312343 s@gmail.com                1001       1001 sql
+      1003 Sunil                        20 m      9012321232 sunil@gmail.com            1001       1001 sql
+
+SQL> SQL> select s.*,c.cname from student s right join course c on s.cid=c.cid;
+
+STUDENT_ID STUDENT_NAME                AGE GENDER      PHONE EMAIL                       CID    EXAM_ID CNAME
+---------- -------------------- ---------- ------ ---------- -------------------- ---------- ---------- ----------
+      1000 Ram                          20 m      9098712384 r@gmail.com                1000       1000 java
+      1001 Siva                         21 m      8989081232 s@gmail.com                1002       1002 python
+      1002 Sumathi                      21 f      9012312343 s@gmail.com                1001       1001 sql
+      1003 Sunil                        20 m      9012321232 sunil@gmail.com            1001       1001 sql
+SQL> select s.*,c.cname from student s full outer join course c on s.cid=c.cid;
+
+STUDENT_ID STUDENT_NAME                AGE GENDER      PHONE EMAIL                       CID    EXAM_ID CNAME
+---------- -------------------- ---------- ------ ---------- -------------------- ---------- ---------- ----------
+      1000 Ram                          20 m      9098712384 r@gmail.com                1000       1000 java
+      1001 Siva                         21 m      8989081232 s@gmail.com                1002       1002 python
+      1002 Sumathi                      21 f      9012312343 s@gmail.com                1001       1001 sql
+      1003 Sunil                        20 m      9012321232 sunil@gmail.com            1001       1001 sql
+
