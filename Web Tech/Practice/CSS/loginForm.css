@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    display: flex;
+    background-color: rgba(205, 66, 189, 0.672);
+
+}
+
+.mainbox {
+    display: flex;
+    width: 500px;
+    height: 430px;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding-top: 15px;        
+    border: 2px solid white;
+
+}
+.login{
+    padding-top: 150px;
+}
+a{
+    text-decoration: none;
+}
+.loginbtn{
+    width: 100px;
+}

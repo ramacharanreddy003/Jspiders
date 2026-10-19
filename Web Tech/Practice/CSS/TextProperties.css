@@ -1,0 +1,81 @@
+ .para {
+     text-align-last: center;
+     text-align: justify;
+     /* 
+    /* text-decoration-line: line-through;
+    text-decoration-line: overline; */
+     /* text-decoration-line: underline;*/
+     /* text-decoration-line: none; */
+     /* 
+    text-decoration-style: dashed;
+    text-decoration-style: dotted;
+    text-decoration-style: wavy;
+    text-decoration-style: solid;
+    text-decoration-style: double;
+
+    text-decoration-color: magenta;
+
+    text-decoration-thickness: 1px;
+     */
+
+     /* text-transform: capitalize;
+     text-transform: lowercase;
+     text-transform: uppercase; */
+
+     /* text spacing */
+     text-indent: 50px;
+     letter-spacing: 1px;
+     word-spacing: 5px;
+     line-height: 22px;
+     white-space: pre;
+     white-space: wrap;
+     white-space: normal;
+
+     line-height: 30px;
+
+ }
+h1{
+    text-shadow: 10px 9px red;
+}
+
+/* font properties */
+p{
+    font-size: small;
+    font-size: large;
+    font-size: smaller;
+    font-size: larger;
+    font-size: x-large;
+
+
+    font-weight: bold;
+    font-weight: bolder;
+    font-weight: lighter;
+    font-weight: light;
+}
+
+
+ /* .para{
+    text-decoration: 2px underline red dashed;
+} */
+.p2{
+   /* font-weight: 800;
+    font-weight: bold;
+    font-weight: bolder; */
+    font-weight: lighter;
+
+
+    font-style: oblique;
+    font-style: italic;
+
+    font-variant: normal;
+    
+    font-variant: small-caps;
+ }
+
+ .p3{
+    font-family: sans-serif;
+    font-family: serif;
+    font-family: cursive;
+    font-family: monospace;
+    font-family: fantasy;
+ }

@@ -1,0 +1,20 @@
+p::first-letter{
+    color: red;
+    font-size: 30px;
+}
+p::first-line{
+    color: goldenrod;
+}
+p::before{
+    content: "Hello! ";
+}
+p::after{
+    content: "Thankyou!!!!!";
+    color: steelblue;
+    
+}
+p{
+    text-align-last: center;
+    letter-spacing: 1px;
+    line-height: 20px;
+}

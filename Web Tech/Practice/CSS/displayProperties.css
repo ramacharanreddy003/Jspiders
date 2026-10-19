@@ -1,0 +1,16 @@
+div{
+    display: inline;
+    
+    color: blue;
+    
+}
+div{
+    display: block;
+    height: 18px;
+}
+
+.a{
+    display: inline-block;
+    width: 30px;
+    color: red;
+}

@@ -1,0 +1,49 @@
+p{
+    background-color: cadetblue;
+    /* color: blue; */
+    text-align: justify;
+    color: rgb(255,0,0);
+
+    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 255);
+
+    color: rgba(255,0,255,0.5);
+
+    /* hexa */
+    color: #ffffff;
+    color: #0fffff;
+    color: #ff0000;
+    color: #0000ff;
+    color: #fff;
+    color: #000;
+    color: #ff0;
+
+    background-color: hsl(0%, 0%, 100%);
+    background-color: hsla(240%,10%,40%,0.5);
+
+
+    background-image: linear-gradient(red,green,yellow);
+    background-image: linear-gradient(blue,red,yellow);
+    background-image: linear-gradient(orange,pink,purple);
+    background-image: linear-gradient(to top red,green,blue);
+
+
+    background-image: repeating-linear-gradient(red,green,blue);
+
+    
+    background-image: repeating-linear-gradient(red 50%,green 80%,blue 10%);
+
+    background-image: radial-gradient(red,green,blue);
+    
+    background-image: radial-gradient(circle,red,blue,green);
+    
+    background-image: repeating-radial-gradient(red 90% ,black);
+
+    background-image: conic-gradient(red,yellow,violet);
+
+    background-image: repeating-conic-gradient(red 0% 3%,black 3% 6%);
+
+    
+
+
+}

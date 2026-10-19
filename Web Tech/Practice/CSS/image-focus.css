@@ -1,0 +1,16 @@
+img{
+    height: 300px;
+    width: 300px;
+    transition: 2s;
+}
+
+div{
+    height: 300px;
+    width: 250px;
+    border: groove 20px red;
+    margin: 100px;
+    overflow: hidden;
+}
+img:hover{
+    transform: scale(3);
+}

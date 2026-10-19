@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.field{
+    position: relative;
+    width: 300px;
+    margin: 20px 0;
+
+}
+.field input{
+    width: 100%;
+    padding: 18px 14px 18px;
+    border: 1px solid black;
+    outline: none;
+    transition: border-color 0.2 ease;
+    
+}
+
+.field label{
+    position: absolute;
+    left: 15px;
+    top: 1px;
+    background-color: white;
+    padding: 0px 15px;
+
+    transform: translateY(1em);
+    
+    transition: all 0.5 ease;
+
+    overflow: hidden;
+}
+
+input:focus+label, input:not(:placeholder-shown)+label{
+    top: -20px;
+}
+
+input::placeholder{
+    opacity: 0;
+}

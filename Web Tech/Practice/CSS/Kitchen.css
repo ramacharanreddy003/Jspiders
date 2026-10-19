@@ -1,0 +1,52 @@
+* {
+    background-color: white;
+    background-image: url(https://img.freepik.com/premium-photo/fresh-vegetables-kitchen-counter-bright-kitchen_36682-275694.jpg?w=360);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    
+    
+
+}
+
+section {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.div1 {
+
+    border: 2px solid black;
+}
+
+.div2 {
+
+    border: 2px solid black;
+}
+
+.div3 {
+
+    border: 2px solid black;
+}
+
+.div4 {
+
+    border: 2px solid black;
+}
+
+.div5 {
+
+    border: 2px solid black;
+}
+
+.div6 {
+
+    border: 2px solid black;
+}

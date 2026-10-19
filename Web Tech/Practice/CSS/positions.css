@@ -1,0 +1,63 @@
+/*div{
+    position: static; 
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+    background-color: green; 
+
+    position: static;
+
+    top: 50px;
+    left: 10px;
+    right: 10px;
+}*/
+/* 
+section{
+
+    position: relative;
+
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    top: 160px;
+    left: 590px;
+   right: 20px;  
+
+
+} */
+/* 
+div{
+    height: 100px;
+    width: 100%;
+    background-color: navajowhite;
+    position: sticky;
+    top: 200px;
+    bottom: 0;
+} */
+
+/* div{
+    position: fixed;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background-color: red;
+    bottom: 100px;
+    right: 20px;
+    top: 400px;
+} */
+
+.sidebar{
+    background-color: black;
+    width: 30px;
+    height: 200px;
+    position: fixed;
+    right: 0;
+    top: 180px;
+    color: white;
+
+    
+    
+
+
+}

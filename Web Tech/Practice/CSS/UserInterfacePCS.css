@@ -1,0 +1,9 @@
+/* input:enabled{
+    background-color: brown;
+}
+input:disabled{
+    background-color: hotpink;
+} */
+input:checked{
+    outline:  2px solid red;
+}

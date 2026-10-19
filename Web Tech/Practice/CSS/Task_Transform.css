@@ -1,0 +1,126 @@
+.div1 {
+    height: 100px;
+    width: 100px;
+    background-color: tomato;
+    animation-duration: 3s;
+    animation-name: move;
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+    /* position: absolute; */
+}
+
+.div2 {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation-duration: 3s;
+    animation-name: move;
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+    /* position: absolute; */
+}
+.div3 {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    animation-duration: 3s;
+    animation-name: move;
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    /* position: absolute; */
+}
+.div4 {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    animation-duration: 3s;
+    animation-name: move;
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    /* position: absolute; */
+
+} 
+
+/* @keyframes move {
+    from{
+        margin-left: 0;
+        background-color: red;
+        transform: rotate(0deg);
+    }
+    to{
+        margin-left: 300px;
+        background-color: aqua;
+        transform: rotate(360deg);
+    }
+} */
+/* 
+@keyframes move {
+    0% {
+        margin-left: 0;
+
+    }
+
+    25% {
+        margin-left: 150px;
+    }
+
+    75% {
+        margin-left: 100px;
+    }
+    100%{
+        margin-left: 50%;
+    }
+
+} */
+
+
+@keyframes move {
+    0%{
+        margin-left: 0px;
+        margin-top: 0;
+    }
+    
+    25%{
+        /* background-color: aqua; */
+        margin-left: 300px;
+        margin-top: 0;
+    }
+
+    50%{
+        /* background-color: green;  */
+        margin-left: 300px;
+        margin-top: 30px;
+    }
+    75%{
+        /* background-color: yellow; */
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    100%{
+        margin-left: 0;
+        margin-top: 0;
+    } 
+}
+
+
+/* 
+@keyframes move{
+    0%{
+        border-radius: 0%;
+    }
+    50%{
+        border-radius: 100%;
+    }
+    100%{
+        border-radius: 0%;
+    } */
