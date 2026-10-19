@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        let year = +prompt("Enter year");
+        let month = +prompt("Enter month");
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                console.log("31 Days");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                console.log("30 Days");
+                break;
+            case 2:
+                if((year%4==0 && year%100!=0) || (year%400==0))
+                console.log("29 days");
+                else console.log("28 Days");
+
+                break;
+            default:
+                console.log("Invalid");
+        }
+    </script>
+ -->
+    <!-- 
+ <script>
+    // leap year or not
+    function LeapOrNot(){
+        let year=2026;
+        if(year%4==0 && year%100!=0)
+    {
+        console.log(`${year} is leap year`);
+    }else if(year%400==0){
+        console.log(`${year} is a leap year`);
+    }else{
+        console.log(`${year} is not a leap year`);
+    }
+    }
+    LeapOrNot();
+ </script> -->
+<!-- 
+<script>
+    function Currency(){
+        let amount=+prompt("Enter amount ");
+        if(amount<100){
+            console.log(`Min 100 Rs.`);
+            return;
+        }
+        let c2000=Math.trunc(amount/2000);
+        console.log(`2000 x ${c2000} = ${2000 * c2000}`);
+        amount=amount%2000;
+        let c500=Math.trunc(amount/500);
+        console.log(`500 x ${c500} = ${500 * c500}`);
+        amount=amount%500;
+        let c200=Math.trunc(amount/200);
+        console.log(`200 x ${c200} = ${200 * c200}`);
+        amount=amount%200;
+        let c100=Math.trunc(amount/100);
+        console.log(`100 x ${c100} = ${100 * c100}`);
+        amount=amount/100;
+    }
+    Currency();
+</script>
+ -->
+
+ <script>
+    // let signal="Green";
+    // if(signal=="Red") console.log("Stop");
+    // if(signal=="Green") console.log("Go");
+    // if(signal=="Orange") console.log("Ready to Go");
+
+
+    // let signal="Green";
+    // if(signal=="Red") console.log("Stop");
+    // else if(signal=="Green") console.log("Go");
+    // else if(signal=="Orange") console.log("Ready to Go");
+    // else console.log("Invalid");
+
+
+    // let signal="Orange";
+    // switch(signal){
+    //     case "Red":
+    //         console.log("Please Stop");
+    //         break;
+    //     case "Green":
+    //         console.log("Please Stop");
+    //         break;
+    //     case "Orange":
+    //         console.log("Be Ready to Go");
+    //         break;
+    //     default:
+    //         console.log("Invalid signal");
+    //         break;
+
+    // }
+
+    let year=+prompt("Enter Year ");
+    let month=+prompt("Enter month");
+    switch(month){
+        case 1:
+        case 3:
+        case 5: 
+        case 7:
+        case 8:
+        case 10:
+        case 12: console.log("31 Days"); break;
+        case 4:
+        case 6:
+        case 9: 
+        case 11:
+            console.log("30 Days");
+            break;
+        case 2:
+            if((year%4==0 && year%100!=0) || (year%400==0)) console.log("29 Days");
+            else console.log("28 Days");
+            break;
+        default: console.log("Invalid");
+    }
+
+
+
+
+
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

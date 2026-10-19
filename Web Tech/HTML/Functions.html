@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Functions in JS</h1>
+    <script>
+     //  function declaration
+        main();
+        function main() {
+            console.log("Main is executing");
+        }
+        main();
+
+        main();
+        function main(){
+            console.log("main starts");
+            m1();
+            console.log("main ends");
+            return;
+
+        }
+        function m1(){
+            console.log("m1 starts");
+            console.log("m1 ends");
+            return;
+        }
+        console.log("Program ends-------------");
+
+
+        main1();
+        function main1  (){
+            console.log("main starts-------");
+            let n=null;
+            n=m1();
+            console.log(n);
+            console.log(n*2);
+            console.log("main ends");
+        }
+    </script>
+
+    <script>
+        //function expression
+        n=function a(){
+            console.log("Hello");
+            console.log("End");
+        }
+        n();
+
+
+        main();
+        function main(){
+            console.log("Main start");
+            let n=m1;
+            console.log(n);
+            n();
+            console.log("Main ends");
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
