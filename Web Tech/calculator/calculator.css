@@ -1,0 +1,45 @@
+section{
+    height: 300px;
+    width: 220px;
+    background-color: rgb(201, 201, 201);
+    border-radius: 10px;
+    margin: 80px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+input{
+    height: 45px;
+    width: 98%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgb(171, 171, 171) inset;
+    outline: none;
+}
+main{
+    height: 220px;
+    width: 98%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+div{
+    background-color: whitesmoke;
+    border-radius: 7px;
+    font-size: 20px;
+    display: flex;
+    font-family:sans-serif ;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0 0 2px 1px gray inset;
+}
+.clear{
+    background-color: red;
+    color: white;
+}
+.op{
+    background-color: black;
+    color: white;
+}
