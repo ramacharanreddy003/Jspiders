@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document Object Properties</h1>
+    <!-- <script>
+        console.log(document.charset);
+        console.log(document.baseURI);
+        console.log(document.domain);
+        console.log(document.title);
+
+    </script>
+    <div>
+        <h1 id="header-one">Amazon </h1>
+        <p>Shop <a href="#">Click here</a></p>
+    </div>
+    <script>
+        let h1tag=document.getElementById("header-one");
+        console.log(h1tag);
+        console.log(h1tag.textContent);
+        h1tag.textContent="Online Shopping App";
+        //getElementById();
+        console.log(h1tag.textContent);
+    </script> -->
+
+    <!-- <script>
+        localStorage.setItem('ename',"Ram");
+        localStorage.setItem('ename',"charan");
+        let getEname=localStorage.getItem('ename');
+        console.log(getEname);
+        localStorage.removeItem('ename');
+        
+
+    </script> -->
+
+    <script>
+        let emps=[
+            {id:101, ename:"Anu"},{id:12, ename:"abc"}];
+        // emp=JSON.stringify(emps);
+            localStorage.setItem('employees',emps);
+            let getEmps=localStorage.getItem('employees');
+            getEmps=JSON.parse(getEmps);
+            console.log(getEmps, typeof getEmps);
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        .food-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+        }
+
+        .navbar {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+        }
+
+        body {
+            background: #fff8f3;
+        }
+
+        .bi:hover {
+            color: #fff8f3;
+        }
+
+        .top-icon {
+            position: fixed;
+            right: 0px;
+            bottom: 10px;
+            height: 55px;
+            width: auto;    
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-danger rounded sticky-top ">
+        <div class="container">
+            <a href="#" class="navbar-brand text-white ms-0 fw-bold fs-2">
+                <i class="bi bi-fork-knife"></i>FoodieHub
+            </a>
+        </div>
+        <div class="m-auto text-white fs-6">
+            <a class="text-white text-decoration-none">Login</a>
+        </div>
+        <div class="m-auto fs-4">
+            <i class="bi bi-cart-fill"></i>
+        </div>
+    </nav>
+
+    <div class="container text-center my-3">
+        <h1 class="display-4 fw-bold">Delicious Food Delivered Fast</h1>
+        <p class="text-muted fs-5">Fresh • Hot • Tasty</p>
+    </div>
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01.jpg"
+                        class="card-img-top food-img" alt="Chicken Biryani">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Chicken Biryani</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>299</p>
+                        <div class="d-flex justify-content-center align-items-center gap-2">
+                            <button class="btn btn-success btn-sm">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                            <span class="fw-bold">0</span>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-dash"></i>
+                            </button>
+
+                        </div>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXuvMLvQPFSL1O-gRnXOjmUUmNpD2CrfDx4cNFMBvR54mIlHQfUa1uM3ro&s=10"
+                        class="card-img-top food-img" alt="Fish">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Fish</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>199</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://www.awesomecuisine.com/wp-content/uploads/2012/11/Chettinad-Mutton-Biryani.jpg"
+                        class="card-img-top food-img" alt="Mutton Biryani">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mutton Biryani</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>399</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600"
+                        class="card-img-top food-img" alt="Burger">
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Burger</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>149</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://www.allrecipes.com/thmb/kgZB2WpV5NUBsd0XPOkcOOV9SEY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/23290-pizza-dough-iii-VAT-Beauty-4x3-06192801c8fa48fe8afaadfea28f532b.jpg"
+                        class="card-img-top food-img" alt="Pizza">
+                    <div class="card-body text-center">
+                        <h5>Pizza</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>149</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVnM9-UQkg8-slBwaHoqrVDM6shxKn8CXsOCObKs0G_UqIRG4MpQ71OZc&"
+                        class="card-img-top food-img" alt="Samosa">
+                    <div class="card-body text-center">
+                        <h5>Samosa </h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>59</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0okTyHzA5oaaLRqIE2SIj4VfgACf59t2EWTjt2zHHEeEBfhrpB6QcY3Ld&s=10"
+                        class="card-img-top food-img" alt="Dosa">
+                    <div class="card-body text-center">
+                        <h5>Dosa</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>59</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9VfMBaEU45nsdK33TIda6ddpcV6GIw0skpwQHQUdLU3xgz0IDz5knKnOy&s=10"
+                        class="card-img-top food-img" alt="Chicken Kabab">
+                    <div class="card-body text-center">
+                        <h5>Chicken Kabab</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>179</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://png.pngtree.com/background/20250103/original/pngtree-highly-detailed-veg-biryani-or-pulav-fried-rice-picture-image_15767365.jpg"
+                        class="card-img-top food-img" alt="Veg Biryani">
+                    <div class="card-body text-center">
+                        <h5>Veg Biryani</h5>
+                        <p class="text-success fw-bold">
+                            <i class="bi bi-currency-rupee"></i>139
+                        </p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://5.imimg.com/data5/ECOM/Default/2024/2/383889520/ML/JS/WV/30496816/1707135193849-sku-3272-0.jpg"
+                        class="card-img-top food-img" alt="Chicken Kabab">
+                    <div class="card-body text-center">
+                        <h5>Chicken Lollipop</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>179</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://i.ytimg.com/vi/7VYGTbSg60s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBxSq-dQW2w319QZUa2iwVBSK1G8w"
+                        class="card-img-top food-img" alt="Chicken Kabab">
+                    <div class="card-body text-center">
+                        <h5>French Fries</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>109</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://bitesofindiaevan.com/wp-content/uploads/2024/11/Gulab-Jamun.png"
+                        class="card-img-top food-img" alt="Chicken Kabab">
+                    <div class="card-body text-center">
+                        <h5>Gulab Jamun</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>69</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://theovenclassics.in/web/uploads/productimages/1648101958_chocolate_chunk.jpg"
+                        class="card-img-top food-img" alt="Chicken Kabab">
+                    <div class="card-body text-center">
+                        <h5>Chocolate Cake</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>699</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card h-100 shadow">
+                    <img src="https://img.magnific.com/premium-photo/gobi-manchurian-flavor-explosion-photo_1036998-345855.jpg?"
+                        class="card-img-top food-img" alt="Chicken Kabab">
+                    <div class="card-body text-center">
+                        <h5>Gobi Manchurian</h5>
+                        <p class="text-success fw-bold"><i class="bi bi-currency-rupee"></i>49</p>
+                        <button class="btn btn-success btn-sm">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                        <span class="fw-bold">0</span>
+                        <button class="btn btn-danger btn-sm">
+                            <i class="bi bi-dash"></i>
+                        </button>
+                        <div class="p-2">
+                            <button class="btn btn-danger">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-icon">
+        <div class="float-end "><a href="" class=" text-decoration-none m-5">Top</a></div><br>
+    </div>
+    <!-- footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <h4>FoodieHub</h4>
+            <p>Delivering happiness, one meal at a time.</p>
+            <small>2026 FoodieHub</small><br>
+            <small>Developed by <b>Charan</b></small>
+        </div>
+    </footer>
+</body>
+
+</html>
