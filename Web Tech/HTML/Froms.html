@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+</head>
+
+<body>
+    <fieldset>
+    <legend align="center"><h1>Application Form</h1></legend>
+    
+    <form action="">
+        <label for="">First Name :</label>
+        <input type="text" autofocus placeholder="Enter your first name" minlength="3" maxlength="50" size="40">
+        <label for="">Last Name :</label>
+        <input type="text" placeholder="Enter your last name" minlength="3" maxlength="50" size="40"> <br><br>
+        <label for="">Date of Birth :</label>
+        <input type="date" min="2000-01-01" max="2025-03-01">
+        <label for="">Age :</label>
+        <input type="number" min="0" max="100"><br><br>
+        <label for="">Gender :</label>
+        <input type="radio" name="gender" value="male" checked>
+        <label for="">Male</label>
+        <input type="radio" name="gender" value="female">
+        <label for="">Female</label>
+        <input type="radio" name="gender" value="others" disabled>
+        <label for="">Others</label> <br><br>
+
+        <label for="">email :</label>
+        <input type="email" size="30"><br><br>
+
+        <label for="">Programming Languages : </label>
+        <input type="checkbox" name="pl" value="javascript">
+        <label for="">Javascript</label>
+        <input type="checkbox" name="pl" value="java">
+        <label for="">Java</label>
+        <input type="checkbox" name="pl" value="python">
+        <label for="">Python</label><br><br>
+
+        <label for="">Ph No :</label>
+        <input type="tel" pattern="[0-9]{10}"><br><br>
+        <label for="">Time :</label>
+        <input type="time">
+        <br><br>
+        <label for="">Month :</label>
+        <input type="month"> <br><br>
+
+        <label for="">Week :</label>
+        <input type="week" name="" value=""><br><br>
+
+        <label for="">Fav color :</label>
+        <input type="color"> <br></br>
+
+        <label for="">url :</label>
+        <input type="url" size="30"> <br><br>
+
+        <label for="">Address :</label>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+        <br><br>
+
+        <br><br>
+        <label for="">select range</label>
+        <input type="range">     <br><br>
+
+        <label for="">Password : </label>
+        <input type="password"> <br><br>
+
+        <label for="">Upload file</label>
+        <input type="file" accept="audio/*, image/*, video/*"> <br><br>
+
+        <input type="file" accept="audio/*, image/*, video/*" multiple>
+        <br><br>
+
+        <input type="text" name="institute" value="Qspiders" readonly> <br><br>
+
+        <label for="">dob with time</label>
+        <input type="datetime-local">   <br><br>
+
+        <label for="">Hidden: </label>
+        <input type="hidden"> <br><br>
+
+        <label for="">Search: </label>
+        <input type="search"> <br><br>
+
+        <input type="button" value="alert" onclick="alert('You clicked on alert')"> <br><br>
+
+        <input type="image" height="50" width="40" src="images.jpg"> <br><br>
+
+        <input type="reset">
+        <input type="submit">
+
+    </form>
+    </fieldset>
+
+
+</body>
+
+</html>

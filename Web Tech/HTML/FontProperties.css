@@ -1,0 +1,38 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&display=swap');
+
+p {
+    /* font-size: 50px;
+    font-size: large; */
+    /*     
+    font-size: oblique; */
+    /* 
+    font-weight: 700;
+    font-weight: bolder;
+    font-weight: lighter; */
+    /* 
+
+    font-variant: normal;
+    font-variant: small-caps; */
+
+    /* font-family: serif;
+    font-family: sans-serif;
+    font-family: monospace;
+    font-family: cursive;
+    font-family: fantasy; */
+
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+ */
+    /* 
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: green;
+
+}
