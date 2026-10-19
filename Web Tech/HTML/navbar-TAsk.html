@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            padding-top: 200px;
+
+        }
+
+        #nav-container {
+            display: flex;
+            height: 50px;
+            width: 100%;
+            padding: 19px;
+            box-shadow: 0 2px 2px 2px gray;
+            border-radius: 40px;
+            background-color: black;
+
+
+
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .navcont {
+            width: 100%;
+            padding-left: 200px;
+            padding-right: 200px;
+
+
+        }
+
+        a:hover {
+            color: pink;
+        }
+
+        .l {
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+
+
+
+        }
+
+        .fa-solid {
+            background-color: white;
+            border-radius: 56px;
+            padding-right: 3px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="navcont">
+        <nav id="nav-container">
+            <ul class="links">
+                <li><i class="fa-solid fa-earth-europe"></i></li>
+                <li><a href="">Work</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Play Ground</a></li>
+                <li><a href="">Resource</a></li>
+                <li><a href="" class="l">abc@gmail.com</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
