@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //     let p1=new Promise(()=>{
+        //         console.log("Resolver function is executing");
+        //     }
+        // );
+        // console.log(p1);
+
+
+        let p1 = new Promise((resolve, reject) => {
+            let fetchData = true;
+            if (fetchData) {
+                resolve([{ id: 1, pName: "Shirt" }, { id: 2, pName: "Shoes" }]);
+            } else {
+                reject("Something went wrong");
+            }
+        });
+        console.log(p1);
+
+        p1.then(function (data) {
+            console.log(data);
+            for (let product of data) {
+                console.log(product.pName);
+            }
+        });
+        
+    </script>
+</body>
+
+</html>

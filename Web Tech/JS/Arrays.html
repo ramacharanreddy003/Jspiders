@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr1=[10,20,30,40];
+        // console.log(arr1);
+        // let a=arr1.push(50,60);
+        // console.log(arr1);
+        // console.log(a);
+
+        // let b=arr1.pop();
+        // console.log(arr1);
+        // console.log(b);
+
+        // arr1.unshift(400);
+        // console.log(arr1);
+
+        // arr1.shift();
+        // console.log(arr1);
+
+        // let a=[1,2,3,4,5];
+        // console.log(a);
+        // a.push(20);
+        // console.log(a);
+        // a.push(30);
+        // console.log(a);
+
+
+        // let data=[11,12,13,14,15,16];
+        // console.log(data);
+        // let m=data.slice(1,4);
+        // console.log(m);
+
+        // let n2=data.slice(3);
+        // console.log(n2);
+
+        // let n3=data.slice(-2);
+        // console.log( n3);
+
+        // let newcopy=data.slice();
+        // console.log(newcopy);
+
+        // newcopy[1]=78;
+        // console.log(data);
+        // console.log(newcopy);
+
+        // newcopy[0]=565;
+        // console.log(newcopy);
+        // console.log(data);
+
+        
+        //get 1st n ele from arr1
+
+        // let  first=data.slice(1,4);
+        // let second=data.slice(-4);
+        // let third=data.slice(0,-1);
+        // console.log(first);
+        // console.log(second);
+        // console.log(third);
+        
+
+        // let d=[1,2,3,4,5];
+        // console.log(d);
+        // let spicearr=d.splice(2,2);
+        // console.log(spicearr);
+        // console.log(d);
+
+        // let r=[11,22,33,44,55,66,77,88,99,10];
+        // console.log(r);
+        // let splicedarr=r.splice(2,1,"red","green","blue");
+        // console.log(splicedarr);
+        // console.log(r);
+
+
+        //forEach()
+        // let data=[23,6,7,34,87,56];
+        // let retval=data.forEach(test);
+        // console.log(retval);
+        // function test(val,i,arr){
+        //     console.log("test fn is executing");
+        //     console.log(`value=>${val}, Index=>${i}`);
+        //     console.log(arr);
+        // }
+
+
+        //arr.map()
+        let data=[23,6,7,34,87];
+        let arr=data.map(test);
+        console.log(arr);
+        function test(val){
+            console.log("test fn is executing..");
+            return val*2;
+        }
+        console.log(data);
+
+        let d=[1,2,3,4,5];
+        let a=d.map(t);
+        function t(v){
+            console.log("t fn");
+            return v;
+        }
+        console.log(d);
+
+    </script>
+</body>
+</html>

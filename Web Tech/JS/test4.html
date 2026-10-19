@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a1=[1,2,3,45,67];
+       // console.log(a1);
+        let a2=[...a1];
+       // console.log(a2);
+
+       
+        //merging arrray
+        let a3=[...a2,20,30,34];
+        console.log(a3);
+
+        let a4=[9,8,7];
+        let a5=[...a4,...a3]
+        console.log(a5);
+
+        // function lists(arr,newEle){
+        //     let newList=
+        // }
+
+
+
+        let o1={
+            name: 'Charan',
+            id:102,
+            city: 'Banglore',
+
+
+        }
+
+        let o2={...o1,city:'Kadapa',state:"AP"};
+        let emp1={name:"Siva",id:'1233'};
+        let empadd={city:'bgr',id:9393};
+
+        let edata={...emp1,...empadd}
+        console.log(edata);
+
+        console.log(o1,o2);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <section>
+        <nav class="navbar bg-dark text-white fst-italic ps-2">
+            <h2>Timer</h2>
+        </nav>
+    </section>
+
+    <section clas="mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 m-auto">
+                    <div class="card mt-5">
+                        <div class="card-body text-center">
+                            <h1>Digital Timer</h1>
+                            <h4 id="time-ele">Time</h4>
+                            <h4 id="date-ele">Date</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let timeele=document.getElementById('time-ele');
+        let dateele=document.getElementById('date-ele');
+
+        function timer(){
+            let d1=new Date();
+            let currdate=d1.toLocaleDateString();
+            let currtime=d1.toLocaleTimeString();
+
+            timeele.textContent=currtime;
+            dateele.textContent=currdate;
+
+        }
+        window.setInterval(timer,1000);
+
+    </script>
+
+</body>
+
+</html>

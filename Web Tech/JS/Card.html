@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        .container img {
+            width: 90%;
+            height: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="mt-5">
+        <div class="container overflow-hidden text-center border m-auto">
+            <img src="https://github.com/ramacharanreddy003/Nature_Images-/blob/main/IMG20260322171030.jpg?raw=true"
+                alt="img">
+
+            <div class="info-box">
+                <div class="row">
+                    <div class="col-6 border pt-3 pb-3">
+                        <h3>Likes</h3>
+                        <h3 id="likecount"></h3>
+                        <button class="btn btn-success" onclick="likeinc()">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-6 border pt-3 pb-3">
+                        <h3>Dislikes</h3>
+                        <h3 id="dislikecount">0</h3>
+                        <button class="btn btn-danger" onclick="likedec()">
+                            <i class="bi bi-hand-thumbs-down"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        let count = 0;
+        let dislikeCount = 0;
+
+        const like = document.getElementById("likecount");
+        like.textContent = count;
+        const dislike = document.getElementById("dislikecount");
+
+        function likeinc() {
+            count++;
+            like.textContent = count;
+            localStorage.setItem('likecount', count);
+        }
+
+        function likedec() {
+            if (count > 0) {
+             //   count--;
+                like.textContent = count;
+            }
+
+            dislikeCount++;
+            dislike.textContent = dislikeCount;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

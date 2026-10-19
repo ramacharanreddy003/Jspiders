@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let e1={eid:101,ename:"Ram"};
+        console.log(e1);
+
+        let arr=[1,2,3,4,5];
+        console.log(arr);
+        console.log(Object.prototype);
+        console.log(Array.prototype);
+    </script>
+    <script>
+        //prototypal inheritance
+        function Student(sid,sname,birthyear){
+            this.sid=sid;
+            this.sname=sname;
+            this.birthyear=birthyear;
+        }
+        Student.prototype.city="Banglore";
+
+
+        Student.prototype.calcAge=function(){
+            let age=2026-this.birthyear;
+            console.log("Age= "+age);
+        };
+        let s1=new Student(101,"Kiran",2001);
+        console.log(s1);
+
+        let s2=new Student(537,"Ram",2003);
+        console.log(s2);
+        console.log(s2.age);
+        console.log(s1.city);
+        console.log(s1.calcAge);
+        s1.calcAge();
+        s2.calcAge();
+    </script>
+</body>
+</html>

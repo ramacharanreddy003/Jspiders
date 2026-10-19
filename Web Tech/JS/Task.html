@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+        <button id="btn" class="btn">Click</button>
+        <button id="button">Click</button>
+
+    </div>
+
+    <div class="buttons">
+        <div id="msg"></div>
+        <div id="c"></div>
+    </div>
+    <script>
+        let c = 0;
+        let b = document.getElementById('btn');
+        let m = document.getElementById('msg');
+        b.addEventListener('click', function () {
+            c++;
+            m.innerHTML += "Hello " + c + '<br>';
+        });
+</script>
+<script>
+        let count = 0;
+        let a = document.getElementById('button');
+        let a1 = document.getElementById('count');
+        a.addEventListener('click', function () {
+            count++;
+            m.innerHTML += "Hello"+count+'<br>';
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s1={
+            sid:101,
+            sname:"Ram Charan",
+            birthyear:2003
+        }
+        let s2={
+            sid:102,
+            sname:"Chandra",
+            birthyear:1979
+        }
+        function calcAge(){
+            console.log(this);
+            let age=2026-this.birthyear;
+            console.log("Age= "+age);
+        }
+        //calcAge();
+        // calcAge.call(s1);
+        // calcAge.call(s2);
+        calcAge.apply(s1);
+        calcAge.apply(s2);
+        
+
+    </script>
+</body>
+</html>

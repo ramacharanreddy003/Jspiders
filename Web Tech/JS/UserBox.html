@@ -1,0 +1,75 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    </head>
+
+    <body>
+        <section class="navbar bg-success pt-4">
+            <nav></nav>
+        </section>
+        <section class="container-fluid mt-5">
+            <div class="row">
+                <div class="col-6 m-auto">
+                    <div class="card">
+                        <div class="card-header bg-warning text-center text-white">
+                            <h2>User Name Box</h2>
+
+                        </div>
+                        <div class="card-body">
+                            <form id="login-form">
+                                <div class="mb-2">
+                                    <input type="text" placeholder="Enter your name" class="form-control" id="usn-box" required>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="password" placeholder="enter password" minlength="5" 
+                                    pattern="[a-z0-9]{5,}" class="form-control" id="pwd-box" title="Password must contain only lowercase letters and numbers, with at least 5 characters" required>
+                                   
+                                </div>
+                                <div class="mb-2">
+                                    <input class="btn btn-warning" type="submit" id="sub-box" value="Submit">
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="card-footer  btn-warning text-black text-center ">
+                            <h5 class="text-ele">Entered username</h5>
+                            <!-- <h5 id="text-pass">Password</h5> -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <footer style="margin-bottom: 300px;"></footer>
+
+        <script>
+            let usnBox=document.getElementById('usn-box');
+            let pwdbox=document.getElementById('pwd-box');
+            let loginformele=document.getElementById('login-form');
+            let displayEle=document.querySelector('.text-ele');
+            let display=document.getElementById('text-pass');
+            loginformele.addEventListener('submit',function(e)
+            {
+                e.preventDefault();
+
+                let username=usnBox.value;
+                let password=pwdbox.value;
+                displayEle.textContent='Entered username: '+username;
+                // display.textContent='Entered password: '+password;
+            }
+            ) 
+        </script>
+
+    </body>
+
+    </html>

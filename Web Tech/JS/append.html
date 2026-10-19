@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let h1Tag=document.createElement('h2');
+        h1Tag.textContent='Hello';
+        console.log(h1Tag);
+    
+        
+        let ptag=document.createElement('p');
+        ptag.textContent='welcome to DOM class';
+        console.log(ptag);
+        let bodyElement=document.body;
+        bodyElement.appendChild(ptag);
+       
+        let bodyEle=document.body;
+
+        let r=bodyEle.append(ptag);
+        console.log(r);
+    
+        // let bodyEle=document.body;
+        let a=bodyEle.append('Hello');
+        console.log(a); 
+
+        let b=bodyEle.appendChild(h1Tag);
+        console.log(b);
+
+        console.log(document.createElement('p'));
+        let c=bodyEle.append('Ram');
+        console.log(c);
+
+    </script>
+</body>
+</html>
